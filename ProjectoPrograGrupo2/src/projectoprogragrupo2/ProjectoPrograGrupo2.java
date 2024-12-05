@@ -16,7 +16,7 @@ public class ProjectoPrograGrupo2 {
         //Baile
         Baile baile = new Baile();
         //Precargamos informacion de trabajador en lista
-        Trabajador trabajador1[] = new Trabajador[7];
+        Trabajador trabajador1[] = new Trabajador[30];
         trabajador1[0] = new Trabajador("Mike", "It", "1");
         trabajador1[1] = new Trabajador("Juan", "It", "2");
         trabajador1[2] = new Trabajador("Hernest", "It", "3");
