@@ -30,6 +30,7 @@ public class Yoga {
             bandera = false;
         }
         //Verificamos si ese trabajador tiene una reserva en la lista
+        setTrabajador(trabajador);
         for (int i = 0; i < reservaciones; i++) {
             if (yoga[i].trabajador.getName().equals(this.trabajador.getName())) {
                 JOptionPane.showMessageDialog(null, "Este trabajador ya tiene una reserva de yoga");
@@ -40,7 +41,6 @@ public class Yoga {
 
         //Si no tiene reserva pasamos a reservar
         if (bandera) {
-            setTrabajador(trabajador);
             yoga[reservaciones] = new Yoga(this.trabajador);
             reservaciones++;
             JOptionPane.showMessageDialog(null, "Reservado con exito");
