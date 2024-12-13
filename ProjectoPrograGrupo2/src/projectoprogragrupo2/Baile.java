@@ -30,7 +30,6 @@ public class Baile {
             bandera = false;
         }
         //Verificamos si ese trabajador tiene una reserva en la lista
-        setTrabajador(trabajador);
         for (int i = 0; i < reservaciones; i++) {
             if (baile[i].trabajador.getName().equals(this.trabajador.getName())) {
                 JOptionPane.showMessageDialog(null, "Este trabajador ya tiene una reserva de baile");
@@ -41,6 +40,7 @@ public class Baile {
 
         //Si no tiene reserva pasamos a reservar
         if (bandera) {
+            setTrabajador(trabajador);
             baile[reservaciones] = new Baile(this.trabajador);
             reservaciones++;
             JOptionPane.showMessageDialog(null, "Reservado con exito");

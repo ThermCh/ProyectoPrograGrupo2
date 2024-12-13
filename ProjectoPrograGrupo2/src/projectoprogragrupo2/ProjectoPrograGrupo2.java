@@ -15,8 +15,11 @@ public class ProjectoPrograGrupo2 {
 
         //Baile
         Baile baile = new Baile();
+
+        //Cine
+    
         //Precargamos informacion de trabajador en lista
-        Trabajador trabajador1[] = new Trabajador[30];
+        Trabajador trabajador1[] = new Trabajador[7];
         trabajador1[0] = new Trabajador("Mike", "It", "1");
         trabajador1[1] = new Trabajador("Juan", "It", "2");
         trabajador1[2] = new Trabajador("Hernest", "It", "3");
@@ -30,7 +33,7 @@ public class ProjectoPrograGrupo2 {
         boolean ciclo = true;
         while (ciclo) {
             //Continuar
-            opcion = Integer.parseInt(JOptionPane.showInputDialog("Hola que desea hacer:" + "\n1.Ver gimnasio\n" + "2.Barista\n" + "3. Baile o Yoga"));
+            opcion = Integer.parseInt(JOptionPane.showInputDialog("Hola que desea hacer:" + "\n1.Ver gimnasio\n" + "2.Barista\n" + "3. Baile o Yoga\n" + "4.Cine"));
             switch (opcion) {
                 case 1:
                     int opcion1 = Integer.parseInt(JOptionPane.showInputDialog("1.Ver reservaciones\n" + "2.Hacer reservaciones\n" + "3.Cambiar reservacion\n" + "4.Eliminar reservacion"));
@@ -67,6 +70,9 @@ public class ProjectoPrograGrupo2 {
                         case 4:
                             barista.eliminarReserva();
                             break;
+                        default:
+                            JOptionPane.showMessageDialog(null, "Opcion no valida");
+                            break;
                     }
                     break;
                 case 3:
@@ -84,6 +90,9 @@ public class ProjectoPrograGrupo2 {
                                 case 3:
                                     yoga.eliminarReserva();
                                     break;
+                                default:
+                                    JOptionPane.showMessageDialog(null, "Opcion no valida");
+                                    break;
 
                             }
                             break;
@@ -99,11 +108,15 @@ public class ProjectoPrograGrupo2 {
                                 case 3:
                                     baile.eliminarReserva();
                                     break;
+                                default:
+                                    JOptionPane.showMessageDialog(null, "Opcion no valida");
+                                    break;
 
                             }
                             break;
 
                     }
+                    break;
 
             }
 
